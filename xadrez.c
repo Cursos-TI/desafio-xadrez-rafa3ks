@@ -2,37 +2,38 @@
 
 int main() {
 
-    int i;
-    int movimentoB=1;
-    int movimentoRA=0;
+int movimentacaoT;
+int movimentacaoB = 1;
+int movimentacaoRA = 1;
+
+//FOR para movimentação da Torre
+printf("***Movimentação da Torre*** \n");
+for (movimentacaoT = 1; movimentacaoT <= 5; movimentacaoT++)
+{
+   printf("Torre se movimentou: %dX para a direita  \n", movimentacaoT);
+}
+
+printf("   \n");
+
+//WHILE para movimentação do bispo
+printf("***Movimentação do Bispo***  \n");
+while (movimentacaoB<=5)
+{
+    printf("Bispo se movimentou: %dX para direita,cima  \n", movimentacaoB);
+    movimentacaoB++;
+}
+
+printf("  \n");
+
+//DO WHILE para movimentação da rainha
+printf("***Movimentação da rainha***  \n");
+do
+{
+    printf("Rainha se movimentou: %dX para a esquerda  \n", movimentacaoRA);
+    movimentacaoRA++;
+} while (movimentacaoRA<=8);
 
 
-    //ultilização do FOR para movimentação da torre
-    printf("Movimentação da torre:")
-    for (i=1;i<=5;i++)
-    {
-        printf("Torre se moveu: %dX para direita \n", i);
-    }
 
-    
-    printf("  \n");
-
-    //ultilização do WHILE para movimentação do bispo
-    while (movimentoB<=5)
-    {
-        printf("Bispo se moveu: %dX para Cima,Direita \n", movimentoB);
-        movimentoB++
-    }
-
-
-    printf("  \n");
-
-    do
-    {
-        printf("Rainha e moveu: %dX para esquerda \n", movimentoRA);
-        movimentoRA++
-    } while (movimentoRA<=8);
-
-    
     return 0;
 }
